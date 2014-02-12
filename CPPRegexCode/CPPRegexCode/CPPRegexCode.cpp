@@ -13,8 +13,7 @@ int _tmain(int argc, _TCHAR* argv[])
     const char *last = first + strlen(first); 
     std::cmatch mr; 
     std::regex rx("abc"); 
-    std::regex_constants::match_flag_type fl = 
-    std::regex_constants::match_default; 
+    std::regex_constants::match_flag_type fl = std::regex_constants::match_default; 
 
 	std::cout << "search(f, f+1, \"abc\") == " << std::boolalpha 
         << regex_search(first, first + 1, rx, fl) << std::endl; 
@@ -38,9 +37,8 @@ int _tmain(int argc, _TCHAR* argv[])
     std::cout << "search(string, \"abc\") == " << std::boolalpha 
         << regex_search(str, mr2, rx) << std::endl; 
     std::cout << "  matched: \"" << mr2.str() << "\"" << std::endl; 
-
-	int x;
-	std::cin >> x;
+	
+	int x = std::cin.get();
 
 	return 0;
 }
