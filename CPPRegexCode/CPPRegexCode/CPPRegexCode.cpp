@@ -48,8 +48,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		/*regex_search(test10, test10+ 1, rx, fl)*/
 		regex_search(first,first + 4, rx, fl)
 		<< std::endl; 
-
-	std::cout << "test 11:size is + 14 == " << std::boolalpha 
+	int firstSize = sizeof(first);
+	std::cout << "test 11:size is + 14 (string length is " << sizeof(firstSize) << ") == " << std::boolalpha 
         << 
 		/*regex_search(test10, test10+ 1, rx, fl)*/
 		regex_search(first, first + 14, rx, fl)
